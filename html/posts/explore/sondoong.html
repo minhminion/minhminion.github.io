@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>Phát hiện thêm hệ thống hang ngầm sâu trên 90m tại Sơn Đoòng</title>
+    <link rel="icon" type="text/css" href="../../../img/favicon.ico">
+    <link href="../../../css/fafont.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <script src="../../../js/jquery-3.4.0.js"></script>
+	<script src="../../../js/bootstrap.js"></script>
+	
+</head>
+
+<div id="modal_signup" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Đăng nhập tài khoản</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form class="form" action="">
+						<div class="form-group">
+							<label for="">Gmail</label>
+							<input type="email" class="form-control" id="gmail">
+							<p id="err_email"></p>
+						</div>
+						<div class="form-group">
+							<label for="">Password</label>
+							<input type="password" class="form-control" id="pw">
+							<p id="err_pw"></p>
+						</div>
+						<div class="form-group">
+							<label for="nick_name">Nickname</label>
+							<input type="text" class="form-control" id="nick_name">
+							<p id="err_nickname"></p>
+						</div>
+						<div class="form-group">
+							<label for="">Date of birth</label>
+							<input type="date" class="form-control" id="dob">
+							<p id="err_dob"></p>
+						</div>
+						<div class="form-group">
+							<label for="">Favorite categories</label><br>
+							<input type="checkbox" name="cate" value="Khám phá"> Khám phá<br>
+							<input type="checkbox" name="cate" value="Phim ảnh"> Phim ảnh<br>
+							<input type="checkbox" name="cate" value="Âm nhạc"> Âm nhạc<br>
+							<p id="err_cate"></p>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Đăng nhập</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div id="modal_login" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">\Login now!</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Gmail</label>
+							<input type="email" class="form-control" id="login_gmail">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control" id="login_pw">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+					</div>
+				</div>
+			</div>
+		  </div>
+<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="./../../index.html">
+						<img class="logo" src="./../../../img/logo.png" height="20px">
+					</a>
+			
+					
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							
+							<li class="nav-item">
+								<a class="nav-link" href="./../../index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="./../../explore.html">Khám phá</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./../../film.html">Phim ảnh</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./../../music.html">Âm nhạc</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./../../contribute.html">Đóng góp</a>
+							</li>
+                            <li class="nav-item">
+                                    <div class="search-bar">
+                                        <form class="ml-auto">
+                                            <div class="form-group has-search">
+                                                <span class="fa fa-search form-control-feedback"></span>
+                                                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="modal" data-target="#modal_signup" href="#">Đăng ký</a>
+							</li>
+							<li class="nav-item">	
+								<a class="nav-link" data-toggle="modal" data-target="#modal_login" href="#">Đăng nhập</a>
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+    <!-- Carousel -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../../img/sondoong4.jpg">
+                <div class="carousel-caption">
+                    <h1 class="display-4">Khám phá</h1>
+                    <h4>Phát hiện thêm hệ thống hang ngầm sâu trên 90m tại Sơn Đoòng</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main -->
+    <div class="main-content section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- List Bai -->
+                <div class="col-12 col-lg-8">
+                    <div class="mb-50">
+                        <!-- News-->
+                        <div class="news">
+                            <div class="newsHeader">
+                                <h2>Phát hiện thêm hệ thống hang ngầm sâu trên 90m tại Sơn Đoòng</h2>
+                                <p>
+                                    Các chuyên gia Hiệp hội hang động Hoàng gia Anh đã công bố qua kết quả khảo sát năm 2018, bất ngờ phát hiện hệ thống hang ngầm ở độ sâu trên 90m dưới lòng hang Sơn Đoòng.
+                                </p>
+                            </div>
+                            <div class="newsBody">
+                                <p>
+                                    Chiều 9.4 tại Hà Nội, UBND tỉnh Quảng Bình kết hợp với Bộ Ngoại giao tổ chức họp báo về thám hiểm sông ngầm trong hang động lớn nhất thế giới Sơn Đoòng.
+                                </p>
+
+                                <center>
+                                    <img src="../../../img/sondoong1.jpg">
+                                </center>
+
+                                <p>Top 5 chuyên gia lặn hang động giỏi nhất thế giới được mời tới Quảng Bình: Trưởng nhóm lặn Martin Holroyd - Chuyên gia BCRA cùng 3 thành viên đã đóng góp lớn cho việc giải cứu thành công đội bóng nhí Lợn Hoang tại hang
+                                    Tham Luông, Chiang Rai, Thái Lan năm 2018: Ông Rick Stanton, ông Jason Mallinson và ông Chris Jewell cùng điều phối viên thiết bị lặn là bà Laura Jewell.</p>
+
+                                <p>
+                                    Các chuyên gia đo độ sâu của dòng sông ngầm bằng dây, cho thấy đáy của dòng sông ngầm bên trong Sơn Đoòng nằm ở độ sâu 93m, ở độ sâu này thì không thể dùng bình lặn nén khí thông thường nên nhóm chuyên gia chỉ có thể đo được ở mức 63m, sau đó chuyên gia
+                                    Jason Mallinson đã lặn sâu đạt ở mức 77m. Tuy nhiên, theo ông Jason Mallinson, ở độ sâu này, việc tìm kiếm lối thông qua hang Thung vẫn chưa thấy, đồng thời độ sâu của hang vẫn tiếp tục sâu hơn.
+                                </p>
+
+                                <center>
+                                    <img src="../../../img/sondoong2.jpg">
+                                </center>
+                                <p>"Chúng tôi ước lượng độ sâu của hang sẽ là 100m đến 120m. Lòng hang có độ rộng 600m, để tiếp tục cuộc thám hiểm này, chúng tôi sẽ phải chuẩn bị cho lần tới bằng phương án dùng bình khí heli (Helium) để có thể lặn sâu 120m
+                                    đến 200m.</p>
+                                <p>
+                                    Với độ sâu mà tôi lặn được là 77m, chúng tôi đã lặn trong vài tiếng và khoảng 80 phút thì phải xử lý giảm áp. Việc giảm áp mất khá nhiều thời gian”, ông Jason Mallinson nói.
+                                </p>
+
+                                <p>
+                                    Phát hiện mới nhất trong chuyến khảo sát lần này là một hệ thống hang ngầm (tunnel) nằm ở độ sâu 60m, càng sâu hệ thống hang ngầm càng mở rộng ra. Độ sâu này đã sâu hơn mực nước biển tại vị trí lặn.
+                                </p>
+
+                                <p>
+                                    Ngoài dòng sông ngầm bên trong hang Sơn Đoòng, các chuyên gia lặn hang động còn lặn khảo sát tại khu vực suối Nước Moọc bên trong VQG Phong Nha - Kẻ Bàng. Tại độ sâu 74m, các chuyên gia buộc phải dừng lại vì cần thiết bị phù hợp hơn.
+                                </p>
+
+                                <center>
+                                    <img src="../../../img/sondoong3.jpg">
+                                </center>
+
+                                <p>Như vậy, theo nhận định của các chuyên gian lặn hang động lần này thì hệ thống hang động đá vôi tại Phong Nha - Kẻ Bàng được chia thành 3 tầng: hang khô, hang nước có dòng chảy và hệ thống hang ngầm nằm ở độ sâu trên 93m.
+                                </p>
+                                <p>Kết quả khảo sát lần này đã mở ra một trang khám phá mới về hệ thống hang ngầm nằm ở độ sâu trên 90m, đồng thời mở cánh cửa cho các nhà thám hiểm khảo sát thêm hệ thống hang động nằm sâu bên dưới lòng đất.</p>
+                                <p>Chia sẻ tại buổi họp báo, ông Trần Tiến Dũng - Phó chủ tịch UBND Quảng Bình cho biết: “Gần 30 năm thám hiểm các hang động ở Quảng Bình, các chuyên gia của Hiệp hội hang động Hoàng gia Anh (BCRA) đã thử lặn ở một số hang
+                                    nước, tuy nhiên tần suất chưa nhiều.
+                                </p>
+                                <p>
+                                    Việc mời các chuyên gia lặn hang động giỏi nhất thế giới đến để lặn xuống sông ngầm bên dưới hang Sơn Đoòng mở ra các cơ hội lớn để khám phá những bí mật và những điều mới lạ bên dưới các hang ngầm.
+                                </p>
+                                <center><img src="../../../img/sondoong4.jpg" alt="">
+                                </center>
+                                <p>
+                                    Hiện nay Quảng Bình đang phát triển du lịch mạo hiểm, đặc biệt Quảng Bình được mệnh danh là vương quốc của những hang động ngầm lớn nhất thế giới, nên tỉnh cũng cố gắng phát triển du lịch hang động. Rất nhiều hang động Quảng Bình đã đưa vào khai thác
+                                    như động Phong Nha, động Tiên Sơn, hang Va… Ngoài ra chúng tôi cũng tổ chức tour du lịch sinh thái, mạo hiểm trong rừng. Và thời gian tới chúng tôi sẽ cố gắng tổ chức thám hiểm lặn ở sông ngầm như các chuyên gia lặn
+                                    vừa mới phát hiện ra ngày 9.4”.
+                                </p>
+                            </div>
+
+                            <div class="newsFooter">
+                                <hr>
+                                <p style="font-size: 13px;">Trần Quang Trung lúc 20 - 4 - 2019, 8:00 am</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar -->
+                <div class="col-12 col-lg-4">
+                    <div class="post-sidebar-area">
+                        <div class="sidebar-widget-area">
+                            <h5 class="title">About Us</h5>
+                            <div class="widget-content">
+                                <p>
+                                    Chúng tôi là những người mang đến cho bạn những thông tin mới nhất về các lĩnh vực khám phá, giải trí. Chúng tôi luôn đảm bảo sẽ đưa đến những mẫu tin chất lượng nhất mà chúng tôi có.!
+                                </p>
+                            </div>
+                            <div class="sidebar-widget-area">
+                                <h5 class="title">Top Stories</h5>
+                                <div class="widget-content">
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/civilwar.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../film/marvel.html" class="headline">
+                                                <h5>
+													7 Phim của vũ trụ điện ảnh Marvel cần xem lại trước khi xem "Avengers: Endgame"
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/violet.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../film/violet.html" class="headline">
+                                                <h5>
+													Violet Evergarden sẽ có dự án anime mới được ra rạp từ ngày 6 dến 19 tháng 9 năm 2019.
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/nhathoducba_03.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../film/nhathoducba.html" class="headline">
+                                                <h5>
+													Disney góp 5 triệu USD để phục dựng lại Nhà thờ Đức Bà Paris sau vụ cháy lớn.
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/unghoangphuc.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../music/unghoangphuc.html" class="headline">
+                                                <h5>
+													Ưng Hoàng Phúc: "Chục triệu view trên Youtube cũng không đủ để trả lại số tiền tôi làm MV.!"
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-area">
+                                <h5 class="title">Connect With Us</h5>
+                                <div class="widget-content">
+                                    <div class="social-area d-flex justify-content-between">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa fa-google"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mt-30">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Single post-->
+                                <div class="single-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="../../../img/nhathoducba_03.jpg">
+                                    </div>
+                                    <!-- Post content -->
+                                    <div class="post-content">
+                                        <a href="../film/nhathoducba.html" class="headline">
+                                            <h5>
+                                                    Disney góp 5 triệu USD để phục dựng lại Nhà thờ Đức Bà Paris sau vụ cháy lớn.
+                                                </h5>
+                                        </a>
+                                        <p>
+                                            Tập đoàn giải trí lớn nhất nhì thế giới góp sức vào công cuộc phục dựng nhà thờ..
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <p>
+                                            <a href="#" class="post-author">
+                                                        Trần Quang Trung
+                                                    </a> lúc
+                                            <a href="#" class="post-date">20 - 4 - 2019, 10:00 am</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Single post-->
+                                <div class="single-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="../../../img/ironman2008.jpg">
+                                    </div>
+                                    <!-- Post content -->
+                                    <div class="post-content">
+                                        <a href="../film/marvel.html" class="headline">
+                                            <h5>
+                                                    7 Phim của vũ trụ Marvel cần xem lại trước khi xem "Avenger : Endgame"
+                                                
+                                                    </h5>
+                                        </a>
+                                        <p>
+
+                                            MCU sắp sửa tung ra tác phẩm thứ 22 của loạt phim về siêu anh hùng...
+
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <p>
+                                            <a href="#" class="post-author">
+                                                        Trần Quang Trung
+                                                    </a> lúc
+                                            <a href="#" class="post-date">20 - 4 - 2019, 10:00 am</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Single post-->
+                                <div class="single-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="../../../img/sontung2.jpg">
+                                    </div>
+                                    <!-- Post content -->
+                                    <div class="post-content">
+                                        <a href="../film/sontung.html" class="headline">
+                                            <h5>
+                                                    Sơn Tùng M-TP, nghệ sĩ Vpop duy nhất sở hữu cùng lúc 3 MV view khủng này!
+                                            </h5>
+                                        </a>
+                                        <p>
+
+                                            Việc MV này cán mốc 150 triệu view trên Youtube sau gần 3 năm ra mắt....
+
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <p>
+                                            <a href="#" class="post-author">
+                                                        Trần Quang Trung
+                                                    </a> lúc
+                                            <a href="#" class="post-date">20 - 4 - 2019, 10:00 am</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="footer-single-widget">
+                        <a href="#"><img src="../../../img/logo.png" alt="">
+                        </a>
+                        <div class="copywrite-text mt-30">
+                            <p>
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made</i> by <a href="#">World</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-single-widget">
+                        <p class="footer-menu justify-content-between ">
+                            World Inc.
+                            <br> Address: Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh
+                            <br> Điện thoại: 0932.197.918
+                            <br> Email: tekitorielric@iuh.edu.vn
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-single-widget">
+                        <h5>Subscribe</h5>
+                        <form action="#" method="post">
+                            <input type="email" name="email" id="email" placeholder="Enter your mail">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/jquery-3.4.0.js"></script>
+    <script src="../../../js/popper.min.js"></script>
+    <script src="../../../js/bootstrap.js"></script>
+</body>
+
+</html>

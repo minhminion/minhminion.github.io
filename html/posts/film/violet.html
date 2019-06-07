@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title>Violet Evergarden sẽ có dự án anime mới vào tháng 9 năm nay</title>
+    <link rel="icon" type="text/css" href="../../../img/favicon.ico">
+    <link href="../../../css/fafont.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <script src="../../../js/jquery-3.4.0.js"></script>
+	<script src="../../../js/bootstrap.js"></script>
+	
+</head>
+
+<div id="modal_signup" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Đăng nhập tài khoản</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form class="form" action="">
+						<div class="form-group">
+							<label for="">Gmail</label>
+							<input type="email" class="form-control" id="gmail">
+							<p id="err_email"></p>
+						</div>
+						<div class="form-group">
+							<label for="">Password</label>
+							<input type="password" class="form-control" id="pw">
+							<p id="err_pw"></p>
+						</div>
+						<div class="form-group">
+							<label for="nick_name">Nickname</label>
+							<input type="text" class="form-control" id="nick_name">
+							<p id="err_nickname"></p>
+						</div>
+						<div class="form-group">
+							<label for="">Date of birth</label>
+							<input type="date" class="form-control" id="dob">
+							<p id="err_dob"></p>
+						</div>
+						<div class="form-group">
+							<label for="">Favorite categories</label><br>
+							<input type="checkbox" name="cate" value="Khám phá"> Khám phá<br>
+							<input type="checkbox" name="cate" value="Phim ảnh"> Phim ảnh<br>
+							<input type="checkbox" name="cate" value="Âm nhạc"> Âm nhạc<br>
+							<p id="err_cate"></p>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Đăng nhập</button>
+				</div>
+			</div>
+		</div>
+	  </div>
+	  <div id="modal_login" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">\Login now!</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Gmail</label>
+							<input type="email" class="form-control" id="login_gmail">
+						</div>
+						<div class="form-group">
+							<label>Password</label>
+							<input type="password" class="form-control" id="login_pw">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+					</div>
+				</div>
+			</div>
+		  </div>
+<body>
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="./../../index.html">
+						<img class="logo" src="./../../../img/logo.png" height="20px">
+					</a>
+			
+					
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+			
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav ml-auto">
+							
+							<li class="nav-item">
+								<a class="nav-link" href="./../../index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./../../explore.html">Khám phá</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="./../../film.html">Phim ảnh</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./../../music.html">Âm nhạc</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="./../../contribute.html">Đóng góp</a>
+							</li>
+                            <li class="nav-item">
+                                    <div class="search-bar">
+                                        <form class="ml-auto">
+                                            <div class="form-group has-search">
+                                                <span class="fa fa-search form-control-feedback"></span>
+                                                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="modal" data-target="#modal_signup" href="#">Đăng ký</a>
+							</li>
+							<li class="nav-item">	
+								<a class="nav-link" data-toggle="modal" data-target="#modal_login" href="#">Đăng nhập</a>
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+    <!-- Carousel -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../../../img/violet2.png">
+                <div class="carousel-caption">
+                    <h1 class="display-4">Phim ảnh</h1>
+                    <h4>Violet Evergarden sẽ có dự án anime mới vào tháng 9 năm nay</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main -->
+    <div class="main-content section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- List Bai -->
+                <div class="col-12 col-lg-8">
+                    <div class="mb-50">
+                        <!-- News-->
+                        <div class="news">
+                            <div class="newsHeader">
+                                <h2>Violet Evergarden sẽ có dự án anime mới vào tháng 9 năm nay</h2>
+                                <p>
+                                    Dự án phim mới với tựa đề Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou sẽ được ra rạp từ ngày 6 đến 19 tháng 9 năm nay
+                                </p>
+                            </div>
+                            <div class="newsBody">
+                                <p>
+                                    Vào hôm thứ Sáu vừa qua, Kyoto Animation vừa thông báo về việc dự án movie anime Violet Evergarden sẽ được công chiếu tại Nhật Bản vào ngày 10 tháng 1. Studio cũng đã đăng tải key visual mới và một đoạn teaser trailer giới thiệu movie.
+                                </p>
+                                <center>
+                                    <video width="450px" controls>
+                                        <source src="../../../img/violet.mp4" type="video/mp4">
+                                            Trình duyệt của bạn không hỗ trợ HTML5.
+                                    </video>
+                                </center>
+                                <p>
+                                    Video trên cũng đã giới thiệu về bộ anime mới ngoại truyện có tựa đề Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou. Bộ anime sẽ kể một câu chuyện khác và được ra rạp tại Nhật Bản vào ngày 6 đến ngày 19 tháng 9.
+                                </p>
+                                <center>
+                                    <img src="../../../img/violet.jpg">
+                                </center>
+
+                                <p>
+                                    Đội ngũ sản xuất movie gồm có:
+                                </p>
+                                <ul>
+                                    <li><b>Đạo diễn: </b>Taichi Ishidate</li>
+                                    <li><b>Kịch bản: </b>Reiko Yoshida</li>
+                                    <li><b>Thiết kế nhân vật và tổng đạo diễn hoạt họa: </b>Akiko Takase</li>
+                                    <li><b>Âm nhạc: </b>Evan Call</li>
+                                </ul>
+                                <center>
+                                    <img src="../../../img/violet3.jpg">
+                                </center>
+
+                                <p>
+                                    Cốt truyện trong movie diễn ra nhiều năm sau khi chiến tranh kết thúc và thế giới dần trở nên bình yên. Một ngày nọ, Violet Evergarden bắt gặp một lá thư đặc biệt.
+                                </p>
+                            </div>
+
+                            <div class="newsFooter">
+                                <hr>
+                                <p style="font-size: 13px;">Trần Quang Trung lúc 20 - 4 - 2019, 8:00 am</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar -->
+                <div class="col-12 col-lg-4">
+                    <div class="post-sidebar-area">
+                        <div class="sidebar-widget-area">
+                            <h5 class="title">About Us</h5>
+                            <div class="widget-content">
+                                <p>
+                                    Chúng tôi là những người mang đến cho bạn những thông tin mới nhất về các lĩnh vực khám phá, giải trí. Chúng tôi luôn đảm bảo sẽ đưa đến những mẫu tin chất lượng nhất mà chúng tôi có.!
+                                </p>
+                            </div>
+                            <div class="sidebar-widget-area">
+                                <h5 class="title">Top Stories</h5>
+                                <div class="widget-content">
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/civilwar.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../film/marvel.html" class="headline">
+                                                <h5>
+													7 Phim của vũ trụ điện ảnh Marvel cần xem lại trước khi xem "Avengers: Endgame"
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/violet.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../film/violet.html" class="headline">
+                                                <h5>
+													Violet Evergarden sẽ có dự án anime mới được ra rạp từ ngày 6 dến 19 tháng 9 năm 2019.
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/nhathoducba_03.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../film/nhathoducba.html" class="headline">
+                                                <h5>
+													Disney góp 5 triệu USD để phục dựng lại Nhà thờ Đức Bà Paris sau vụ cháy lớn.
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Post -->
+                                    <div class="single-post-3 align-items-center">
+                                        <!-- Post - thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="../../../img/unghoangphuc.jpg">
+                                        </div>
+                                        <!-- Post content -->
+                                        <div class="post-content">
+                                            <a href="../music/unghoangphuc.html" class="headline">
+                                                <h5>
+													Ưng Hoàng Phúc: "Chục triệu view trên Youtube cũng không đủ để trả lại số tiền tôi làm MV.!"
+											</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget-area">
+                                <h5 class="title">Connect With Us</h5>
+                                <div class="widget-content">
+                                    <div class="social-area d-flex justify-content-between">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa fa-google"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mt-30">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- Single post-->
+                                <div class="single-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="../../../img/nhathoducba_03.jpg">
+                                    </div>
+                                    <!-- Post content -->
+                                    <div class="post-content">
+                                        <a href="../film/nhathoducba.html" class="headline">
+                                            <h5>
+                                                    Disney góp 5 triệu USD để phục dựng lại Nhà thờ Đức Bà Paris sau vụ cháy lớn.
+                                                </h5>
+                                        </a>
+                                        <p>
+                                            Tập đoàn giải trí lớn nhất nhì thế giới góp sức vào công cuộc phục dựng nhà thờ..
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <p>
+                                            <a href="#" class="post-author">
+                                                        Trần Quang Trung
+                                                    </a> lúc
+                                            <a href="#" class="post-date">20 - 4 - 2019, 10:00 am</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Single post-->
+                                <div class="single-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="../../../img/ironman2008.jpg">
+                                    </div>
+                                    <!-- Post content -->
+                                    <div class="post-content">
+                                        <a href="../film/marvel.html" class="headline">
+                                            <h5>
+                                                    7 Phim của vũ trụ Marvel cần xem lại trước khi xem "Avenger : Endgame"
+                                                
+                                                    </h5>
+                                        </a>
+                                        <p>
+
+                                            MCU sắp sửa tung ra tác phẩm thứ 22 của loạt phim về siêu anh hùng...
+
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <p>
+                                            <a href="#" class="post-author">
+                                                        Trần Quang Trung
+                                                    </a> lúc
+                                            <a href="#" class="post-date">20 - 4 - 2019, 10:00 am</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!-- Single post-->
+                                <div class="single-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="../../../img/sontung2.jpg">
+                                    </div>
+                                    <!-- Post content -->
+                                    <div class="post-content">
+                                        <a href="../film/sontung.html" class="headline">
+                                            <h5>
+                                                    Sơn Tùng M-TP, nghệ sĩ Vpop duy nhất sở hữu cùng lúc 3 MV view khủng này!
+                                            </h5>
+                                        </a>
+                                        <p>
+
+                                            Việc MV này cán mốc 150 triệu view trên Youtube sau gần 3 năm ra mắt....
+
+                                        </p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <p>
+                                            <a href="#" class="post-author">
+                                                        Trần Quang Trung
+                                                    </a> lúc
+                                            <a href="#" class="post-date">20 - 4 - 2019, 10:00 am</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="footer-single-widget">
+                        <a href="#"><img src="../../../img/logo.png" alt="">
+                        </a>
+                        <div class="copywrite-text mt-30">
+                            <p>
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made</i> by <a href="#">World</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-single-widget">
+                        <p class="footer-menu justify-content-between ">
+                            World Inc.
+                            <br> Address: Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh
+                            <br> Điện thoại: 0932.197.918
+                            <br> Email: tekitorielric@iuh.edu.vn
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="footer-single-widget">
+                        <h5>Subscribe</h5>
+                        <form action="#" method="post">
+                            <input type="email" name="email" id="email" placeholder="Enter your mail">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../../js/jquery-3.4.0.js"></script>
+    <script src="../../../js/popper.min.js"></script>
+    <script src="../../../js/bootstrap.js"></script>
+</body>
+
+</html>
