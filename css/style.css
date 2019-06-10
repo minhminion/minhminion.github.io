@@ -736,10 +736,14 @@ min-width: 200px;
 	position:relative;
 	height:0;
 	}
-	.map-container iframe{
-	left:0;
-	top:0;
-	height:100%;
-	width:100%;
-	position:absolute;
-	}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+.card-inner{
+	margin-left: 4rem;
+}
