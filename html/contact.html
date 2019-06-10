@@ -11,9 +11,20 @@
 	<script src="../js/jquery-3.4.0.js"></script>
 	<script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
+    <script src="../js/all.js"></script>
     
             
 </head>
+<style>
+	input[type='number'] {
+    -moz-appearance:textfield;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+</style>
 <div id="modal_signup" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -195,16 +206,49 @@
 		<div class="row justify-content-center">
             <div id="map-container-google-1" class="col-12 col-lg-6 z-depth-1-half">
                 <iframe src="https://maps.google.com/maps?q=155%20S%C6%B0%20V%E1%BA%A1n%20H%E1%BA%A1nh%2C%20Ph%C6%B0%E1%BB%9Dng%2012%2C%20Qu%E1%BA%ADn%2010%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                    style="border:0  ;width: 100%;height: 70vh;" allowfullscreen ></iframe>
+                    style="border:0  ;width: 100%;height: 100vh;" allowfullscreen ></iframe>
 			</div>
-			<div class="col-12 col-lg-6 contact">
-				<h2>Thông tin Liên Hệ</h2>
-				<p>M2N luôn phấn đấu, nỗ lực không ngừng để đem lại cho người tiêu dùng những sản phẩm công nghệ tiên tiến, và đã trở thành một trong những thương hiệu đáng tin cậy và được yêu thích nhất. M2N luôn cam kết cung cấp hàng chính hãng từ các nhà sản xuất, chất lượng luôn được đảm bảo và mức giá phù hợp trong môi trường cạnh tranh.</p>
-	
-				<div class="contact-address mt-50">
-					<p><span>địa chỉ:</span> 273 An Dương Vương, Phường 3, Quận 5, TP.HCM</p>
-					<p><span>điện thoại:</span> (028) 38382 664</p>
-					<p>vpkcntt@sgu.edu.vn</p>
+			<div class="col-12 col-lg-6 row">
+				<div class="col-12 contact">
+					<h2>Thông tin Liên Hệ</h2>
+					<p>M2N luôn phấn đấu, nỗ lực không ngừng để đem lại cho người tiêu dùng những sản phẩm công nghệ tiên tiến, và đã trở thành một trong những thương hiệu đáng tin cậy và được yêu thích nhất. M2N luôn cam kết cung cấp hàng chính hãng từ các nhà sản xuất, chất lượng luôn được đảm bảo và mức giá phù hợp trong môi trường cạnh tranh.</p>
+		
+					<div class="contact-address mt-50">
+						<p><span>địa chỉ:</span> 273 An Dương Vương, Phường 3, Quận 5, TP.HCM</p>
+						<p><span>điện thoại:</span> (028) 38382 664</p>
+						<p>vpkcntt@sgu.edu.vn</p>
+					</div>
+				</div>
+				<div class="col-12">
+					<h3>Đóng góp ý kiến</h3>
+
+					<div class="mt-30" id="contribute">
+						<form class="form">
+							<span class="contribute-alert">
+
+							</span>
+							<div class="form-group">
+								<label style="font-weight: bold">Tên của bạn: </label>
+								<input class="form-control" id="name" type="text" name="name" placeholder="Nhập tên của bạn">
+							</div>
+							<div class="form-group">
+								<label style="font-weight: bold">Số điện thoại: </label>
+								<input class="form-control" id="phone" type="number" name="phone" placeholder="Nhập số điện thoại" min="0" value>
+							</div>
+
+							<div class="form-group">
+								<label style="font-weight: bold">Email: </label>
+								<input class="form-control" id="email1" type="email" name="email" placeholder="Nhập email">
+							</div>
+
+							<div class="form-group">
+								<label style="font-weight: bold">Ý tưởng đóng góp: </label>
+								<textarea class="form-control" rows="7" id="textarea" name="cmt" placeholder="Đóng góp ý tưởng của bạn tại đây"></textarea>
+							</div>
+
+							<button class="btn btn-info" id="donggop">Đóng góp</button>
+						</form>
+					</div>			
 				</div>
 			</div>
 		</div>
