@@ -10,13 +10,8 @@
 	background-color: #252228 !important;
 }
 
-.navbar li a{
-	color: #b1b8bf !important;
-	margin: 0px 10px 0px 10px;
-}
-
-.navbar li a:hover{
-	color: white !important;
+.navbar .nav-item{
+	margin:0px 10px;
 }
 
 .navbar li a.active{
@@ -449,6 +444,7 @@ min-width: 200px;
 }
 
 .single-post .post-content{
+	height: 250px;
 	padding: 20px 30px;
 }
 
@@ -471,6 +467,15 @@ min-width: 200px;
 
 .single-post .post-content a:hover{
 	color: #3a2e77;
+	font-weight: bold;
+}
+
+.single-post .post-content .post-relate{
+	color: #8d8d8d;
+	font-size:13px;
+}
+.single-post .post-content .post-relate:hover{
+	color:#252228;
 	font-weight: bold;
 }
 

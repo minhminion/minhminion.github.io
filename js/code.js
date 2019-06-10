@@ -275,7 +275,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Trần Quang Trung\
+                      ABC\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\20 - 4 - 2019, 14:00 pm</a>\
@@ -302,7 +302,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\
@@ -331,7 +331,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -357,7 +357,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -384,7 +384,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -410,7 +410,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -437,7 +437,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -464,7 +464,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -490,7 +490,7 @@ function seek() {
           <div class='post-meta'>\
               <p>\
                   <a href='#' class='post-author'>\
-                      Kiều Tâm Đỉnh\
+                      Lưu Bảo Minh\
                   </a>\
                   lúc\
                   <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -526,7 +526,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Trần Quang Trung\
+                ABC\
             </a>\
             lúc\
             <a href='#' class='post-date'>\20 - 4 - 2019, 14:00 pm</a>\
@@ -553,7 +553,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\
@@ -582,7 +582,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -608,7 +608,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -635,7 +635,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -661,7 +661,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -688,7 +688,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -715,7 +715,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
@@ -741,7 +741,7 @@ function seek() {
     <div class='post-meta'>\
         <p>\
             <a href='#' class='post-author'>\
-                Kiều Tâm Đỉnh\
+                Lưu Bảo Minh\
             </a>\
             lúc\
             <a href='#' class='post-date'>\15 - 5 - 2019, 10:00 am</a>\
