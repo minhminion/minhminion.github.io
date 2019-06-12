@@ -17,10 +17,12 @@
             border: 1px solid black;
         }
         .operator{
-            height: 130px;
+            height: 150px;
         }
         .btn{
-            line-height: 2.8;
+            font-size: 3ex ;
+            font-weight: bold;
+            line-height: 2.1;
             vertical-align: middle;
             height: 60px;
         }
@@ -28,16 +30,17 @@
             background-color: #d3d3d3;
         }
         .btn-e{
+            font-weight: normal;
             background-color:#F7F7F9;
         }
         
     </style>
     <body>
-        <div class="container h-100" id="myCal">
-            <div class="row 100" id="calculator">
+        <div class="container h-100 pt-5" id="myCal">
+            <div class="row" id="calculator">
                 <div class="operator col-12 pt-3 text-right"> 
                     <p class="display-block h-25">{{ temp }}</p>
-                    <h3 >{{ display || '0'}}</h3>
+                    <h1>{{ display || '0'}}</h1>
                 </div>
                 <div @click="clear" class="col-3 btn btn-e">CE</div>
                 <div @click="percent" class="col-3 btn btn-e">%</div>
@@ -46,7 +49,7 @@
                 <div @click="append(7)" class="col-3 btn">7</div>
                 <div @click="append(8)" class="col-3 btn">8</div>
                 <div @click="append(9)" class="col-3 btn">9</div>
-                <div @click="cal('*')" class="col-3 btn btn-e">X</div>
+                <div @click="cal('*')" class="col-3 btn btn-e">x</div>
                 <div @click="append(4)" class="col-3 btn">4</div>
                 <div @click="append(5)" class="col-3 btn">5</div>
                 <div @click="append(6)" class="col-3 btn">6</div>
@@ -55,9 +58,9 @@
                 <div @click="append(2)" class="col-3 btn">2</div>
                 <div @click="append(3)" class="col-3 btn">3</div>
                 <div @click="cal('+')" class="col-3 btn btn-e">+</div>
-                <div class="col-3 btn btn-e">+/-</div>
+                <div @click="minus" class="col-3 btn btn-e">+/-</div>
                 <div @click="append(0)" class="col-3 btn">0</div>
-                <div @click="append('.')" class="col-3 btn btn-e">.</div>
+                <div @click="dot" class="col-3 btn btn-e">.</div>
                 <div @click="result" class="col-3 btn btn-e">=</div>
             </div>
         </div>
@@ -69,41 +72,55 @@
                 temp : "",
                 display : "",
                 total : 0,
+                done : false
             },
             methods: {
                 clear(){
                     this.temp=""
                     this.display =""
                     this.total=0
+                    this.done = false
                 },
                 backSpace()
                 {
                     this.display = this.display.substring(0,this.display.length - 1)
                 },
                 append(number){
+                    this.reset()
                     this.display = `${this.display}${number}`
                 },
                 math(s)
                 {
                     switch (s){
                         case "+":
-                            this.total = parseInt(this.total) + parseInt(this.display)
+                            this.total = parseFloat(this.total) + parseFloat(this.display)
                         break
                         case "-":
-                            this.total = parseInt(this.total) - parseInt(this.display)
+                            this.total = parseFloat(this.total) - parseFloat(this.display)
                         break
                         case "*":
-                            this.total = parseInt(this.total) * parseInt(this.display)
+                            this.total = parseFloat(this.total) * parseFloat(this.display)
                         break
                         case "/":
-                            this.total = parseInt(this.total) / parseInt(this.display)
+                            this.total = parseFloat(this.total) / parseFloat(this.display)
                         break
                     }
+                },
+                minus()
+                {
+                    if(this.display != 0 || this.display != "")
+                    this.display = this.display.charAt(0) === "-" ? this.display.slice(1) : `-${this.display}`
                 },
                 percent()
                 {
                     if(this.temp != "")this.result()
-                    this.display =`${parseInt(this.display) / 100}`
+                    this.display =`${parseFloat(this.display) / 100}`
+                },
+                dot(){
+                    if( this.display.split(".").length == 1)
+                    {
+                        this.display=`${this.display}.`
+                    }
                 },
                 cal(e)
                 {
@@ -116,7 +133,7 @@
                         }
                         else{
                             this.temp = `${this.temp}${this.display}${e}`
-                            this.total=parseInt(this.display)
+                            this.total=parseFloat(this.display)
                         }
                         this.display=""
                     }
@@ -128,7 +145,16 @@
                     this.total == 0 ? this.display="" : this.display=`${this.total}`
                     this.total=0
                     this.temp=""
+                    this.done = true 
                 },
+                reset()
+                {
+                    if(this.done == true && this.temp == "")
+                    {
+                        this.clear()
+                    }
+                }
+                
                 
             },
         })
