@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn Vue.js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <style scoped>
+        #calculator{
+            border: 1px solid black;
+        }
+        .operator{
+            height: 130px;
+        }
+        .btn{
+            line-height: 2.8;
+            vertical-align: middle;
+            height: 60px;
+        }
+        .btn:hover{
+            background-color: #d3d3d3;
+        }
+        .btn-e{
+            background-color:#F7F7F9;
+        }
+        
+    </style>
+    <body>
+        <div class="container h-100" id="myCal">
+            <div class="row 100" id="calculator">
+                <div class="operator col-12 pt-3 text-right"> 
+                    <p class="display-block h-25">{{ temp }}</p>
+                    <h3 >{{ display || '0'}}</h3>
+                </div>
+                <div @click="clear" class="col-3 btn btn-e">CE</div>
+                <div @click="percent" class="col-3 btn btn-e">%</div>
+                <div @click="backSpace" class="col-3 btn btn-e">C</div>
+                <div @click="cal('/')" class="col-3 btn btn-e">/</div>
+                <div @click="append(7)" class="col-3 btn">7</div>
+                <div @click="append(8)" class="col-3 btn">8</div>
+                <div @click="append(9)" class="col-3 btn">9</div>
+                <div @click="cal('*')" class="col-3 btn btn-e">X</div>
+                <div @click="append(4)" class="col-3 btn">4</div>
+                <div @click="append(5)" class="col-3 btn">5</div>
+                <div @click="append(6)" class="col-3 btn">6</div>
+                <div @click="cal('-')" class="col-3 btn btn-e">-</div>
+                <div @click="append(1)" class="col-3 btn">1</div>
+                <div @click="append(2)" class="col-3 btn">2</div>
+                <div @click="append(3)" class="col-3 btn">3</div>
+                <div @click="cal('+')" class="col-3 btn btn-e">+</div>
+                <div class="col-3 btn btn-e">+/-</div>
+                <div @click="append(0)" class="col-3 btn">0</div>
+                <div @click="append('.')" class="col-3 btn btn-e">.</div>
+                <div @click="result" class="col-3 btn btn-e">=</div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var cal = new Vue({
+            el:"#calculator",
+            data:{
+                temp : "",
+                display : "",
+                total : 0,
+            },
+            methods: {
+                clear(){
+                    this.temp=""
+                    this.display =""
+                    this.total=0
+                },
+                backSpace()
+                {
+                    this.display = this.display.substring(0,this.display.length - 1)
+                },
+                append(number){
+                    this.display = `${this.display}${number}`
+                },
+                math(s)
+                {
+                    switch (s){
+                        case "+":
+                            this.total = parseInt(this.total) + parseInt(this.display)
+                        break
+                        case "-":
+                            this.total = parseInt(this.total) - parseInt(this.display)
+                        break
+                        case "*":
+                            this.total = parseInt(this.total) * parseInt(this.display)
+                        break
+                        case "/":
+                            this.total = parseInt(this.total) / parseInt(this.display)
+                        break
+                    }
+                },
+                percent()
+                {
+                    if(this.temp != "")this.result()
+                    this.display =`${parseInt(this.display) / 100}`
+                },
+                cal(e)
+                {
+                    if(this.display != 0 || this.display != "")
+                    {
+                        if(this.temp != "")
+                        {
+                            this.temp = `${this.temp}${this.display}${e}`
+                            this.math(e)
+                        }
+                        else{
+                            this.temp = `${this.temp}${this.display}${e}`
+                            this.total=parseInt(this.display)
+                        }
+                        this.display=""
+                    }
+                },
+                result()
+                {
+                    $s = this.temp.charAt(this.temp.length-1);
+                    this.math($s)
+                    this.total == 0 ? this.display="" : this.display=`${this.total}`
+                    this.total=0
+                    this.temp=""
+                },
+                
+            },
+        })
+    </script>
+</html>
