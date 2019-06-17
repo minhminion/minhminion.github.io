@@ -74,11 +74,11 @@
     <body>
         <div class="container h-100 pt-5" id="myCal">
             <div class="row" id="calculator">
-                <nav class="w-100" id="navbar">
-                    <div @click="btn" class="navbar-toggler p-3">
-                        <i class="fas fa-bars"></i>
+                <!-- <div class="w-100" id="navbar">
+                    <div  class="navbar-toggler p-3">
+                        <i @click="btnNav('abc')" class="fas fa-bars"></i>
                     </div>
-                    <div class="nav-content p-3" :style="{ width: myWidth+'%' }" >
+                    <div class="nav-content p-3" v-bind:style="{ width: myWidth +'%' }" >
                         <ul>
                             <li>ABC</li>
                             <li>ABC</li>
@@ -86,7 +86,7 @@
                             <li>ABC</li>
                         </ul>
                     </div>
-                </nav>
+                </div> -->
                 <div class="operator col-12 pt-3 text-right"> 
                     <p class="display-block h-25">{{ temp }}</p>
                     <h1>{{ display || '0'}}</h1>
@@ -118,13 +118,13 @@
         var nav = new Vue({
             el:"#navbar",
             data:{
-                myWidth:0
+                myWidth : 50
             },
-            methods:{
-                btn(){
-                    console.log("dasd")
+            methods: {
+                btnNav:function(s){
+                    alert(s)
                 },
-            }
+            },
         })
 
         var cal = new Vue({
