@@ -91,9 +91,13 @@
                     <p class="display-block h-25">{{ temp }}</p>
                     <h1>{{ display || '0'}}</h1>
                 </div>
-                <div @click="clear" class="col-3 btn btn-e">CE</div>
                 <div @click="percent" class="col-3 btn btn-e">%</div>
-                <div @click="backSpace" class="col-3 btn btn-e">C</div>
+                <div @click="squared_root" class="col-3 btn btn-e">√</div>
+                <div @click="squared" class="col-3 btn btn-e">X^2</div>
+                <div class="col-3 btn btn-e">1/x</div>
+                <div @click="clear" class="col-3 btn btn-e">CE</div>
+                <div @click="clear_all" class="col-3 btn btn-e">C</div>
+                <div @click="backSpace" class="col-3 btn btn-e"><i class="far fa-caret-square-left"></i></div>
                 <div @click="cal('/')" class="col-3 btn btn-e">/</div>
                 <div @click="append(7)" class="col-3 btn">7</div>
                 <div @click="append(8)" class="col-3 btn">8</div>
@@ -137,6 +141,9 @@
             },
             methods: {
                 clear(){
+                    this.display =""
+                },
+                clear_all(){
                     this.temp=""
                     this.display =""
                     this.total=0
@@ -148,6 +155,10 @@
                 },
                 append(number){
                     this.reset()
+                    if(this.display == '0')
+                    {
+                        this.display = ""
+                    }
                     this.display = `${this.display}${number}`
                 },
                 math(s)
@@ -175,13 +186,19 @@
                 },
                 percent()
                 {
-                    if(this.temp != "")this.result()
+                    var check = /^[0-9|.|a-z]{1,}?[+|*|/]{1}/g
+                    this.display = this.display == "" ? 0 : this.display
                     this.display =`${parseFloat(this.display) / 100}`
+                    console.log(check.test(this.temp))
+                    if(check.test(this.temp) == true)
+                    {
+                        this.temp = `${this.temp}${this.display}`
+                    }
                 },
                 dot(){
-                    if( this.display.split(".").length == 1)
+                    if( this.display.split(".").length == 1 )
                     {
-                        this.display=`${this.display}.`
+                        this.display= this.display != "" ? `${this.display}.` : `0.`
                     }
                 },
                 cal(e)
@@ -215,7 +232,19 @@
                     {
                         this.clear()
                     }
-                }, 
+                },
+                squared(){
+                    if(this.display != 0 || this.display != "")
+                    {
+                        this.display = Math.pow(parseFloat(this.display),2)
+                    }
+                },
+                squared_root(){
+                    if(this.display != 0 || this.display != "")
+                    {
+                        this.display = Math.sqrt(parseFloat(this.display))
+                    }
+                },
             },
         })
 
