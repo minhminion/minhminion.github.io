@@ -1,0 +1,247 @@
+@media (min-width: 1200px){
+    #carousel .arrow.arrow-left {
+        left: 0;
+    }
+}
+@media (min-width: 992px){
+    #carousel .arrow.arrow-left {
+        left: -15px;
+    }
+}
+@media (min-width: 768px){
+    #carousel .arrow.arrow-left {
+        left: -40px;
+    }
+}
+@media (min-width: 768px){
+    #carousel .arrow {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+#carousel .arrow {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+    display: none;
+    height: 80px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 80px;
+    margin-top: -40px;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    z-index: 1;
+}
+#carousel * {
+    cursor: pointer;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+
+#carousel .board {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/cabe246…/board-back.jpg);
+    height: 500px;
+    margin: 0 auto;
+    max-width: 880px;
+}
+
+.board {
+    background: -webkit-gradient(linear, left top, left bottom, from(#3EB9DE), to(#3A80DE));
+    background: linear-gradient(#3EB9DE, #3A80DE);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(74,115,159,0.29);
+    cursor: default;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 18px;
+    position: relative;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.board .header {
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+.board .header .title {
+    float: left;
+}
+
+.board .header .board-users {
+    float: left;
+    padding: 2px;
+    margin-left: 15px;
+}
+
+.board .header .board-users .user {
+    float: right;
+    margin-left: -5px;
+}
+.board .user.user-3 {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/pattern-library/images/5788b03…/user-3.png);
+}
+.board .user {
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    height: 38px;
+    width: 38px;
+}
+
+.board .lists {
+    min-width: 1000px;
+    overflow: auto;
+}
+
+@media (min-width: 992px){
+    #carousel[data-step="1"] .to-do {
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    #carousel .board .to-do {
+        display: block;
+    }
+}
+#carousel[data-step="1"] .list {
+    display: none;
+}
+#carousel .board .to-do {
+    display: none;
+}
+#carousel * {
+    cursor: pointer;
+}
+.board .lists .list {
+    float: left;
+    margin: 0 10px 5px 0;
+    width: 230px;
+}
+.board .lists .list .list-content {
+    background-color: #E5EFF5;
+    border-radius: 6px;
+    box-shadow: 0,2px,4px,rgba(0,0,0,0.5);
+    padding: 8px;
+}
+
+.board .lists .list .list-content .card {
+    background-color: #CCDCE6;
+    border-radius: 4px;
+    font-size: .9rem;
+    margin-bottom: 8px;
+    min-height: 33px;
+    position: relative;
+    overflow: hidden;
+}
+
+.board .lists .list .list-content .card .card-content {
+    background-color: #fff;
+    padding: 6px 8px;
+    min-height: 33px;
+}
+
+.board .lists .list .list-content .add-card {
+    color: #aaa;
+    font-size: .9rem;
+    margin: 0 0 5px 5px;
+}
+
+#carousel .board .card-back-overlay, #carousel .board .card.empty {
+    display: none;
+}
+.board .card-back-overlay {
+    background-color: rgba(27,46,57,0.6);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.board .card-back-overlay .card-back {
+    background-color: #E5EFF5;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0,2px,4px,rgba(0,0,0,0.5);
+    margin: 40px auto 0;
+    max-width: 570px;
+    padding: 20px;
+}
+.board .card-back-overlay .card-back .meta {
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+.board .card-back-overlay .card-back h6 {
+    margin: 0 0 .25rem;
+}
+.board .card-back-overlay .card-back .checklist {
+    font-style: italic;
+}
+.board .card-back-overlay .card-back textarea {
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 80px;
+}
+#carousel .board .captions {
+    background-color: rgba(48,54,76,0.8);
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+#carousel[data-step="1"] .board .captions .caption.caption-1 {
+    display: block;
+}
+#carousel .board .captions .caption {
+    display: none;
+}
+#carousel .board .captions nav a {
+    display: block;
+    float: left;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 30px;
+}
+#carousel #robot {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/29ebb98…/robot.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    height: 188px;
+    position: absolute;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    width: 179px;
+    z-index: 2;
+}
